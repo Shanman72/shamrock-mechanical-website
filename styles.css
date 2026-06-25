@@ -60,22 +60,12 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  font-size: 1.15rem;
+  flex: 0 0 auto;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--green), var(--green-dark));
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  font-weight: 900;
-  box-shadow: 0 10px 30px rgba(20, 83, 45, 0.24);
+.brand-logo {
+  width: clamp(220px, 28vw, 360px);
+  height: auto;
 }
 
 .nav-links {
@@ -499,6 +489,10 @@ p {
 }
 
 @media (max-width: 520px) {
+  .brand-logo {
+    width: 210px;
+  }
+
   .container {
     width: min(var(--max), calc(100% - 28px));
   }
